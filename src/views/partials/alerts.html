@@ -1,0 +1,41 @@
+<%if(success.length > 0){%>
+  <div class="alert success">
+<span class="closebtn">&times;</span>  
+  <p><i class="fas fa-database"></i> <%=success%></p>
+</div>
+  <%}%>
+
+<%if(err.length > 0){%>
+  <div class="alert incorrect">
+<span class="closebtn">&times;</span>  
+  <p><i class="fas fa-exclamation-circle"></i> <%=err%></p>
+</div>
+  <%}%>
+
+<%if(loginSuccess.length > 0){%>
+    <div class="alert login success">
+  <span class="closebtn">&times;</span>  
+    <p><i class="fas fa-sign-in-alt"></i> <%=loginSuccess%></p>
+  </div>
+  <%}%>
+  
+  
+  <%if(logOut.length > 0){%>
+    <div class="alert login incorrect">
+  <span class="closebtn">&times;</span>  
+    <p><i class="fas fa-sign-in-alt"></i> <%=logOut%></p>
+  </div>
+  <%}%>
+
+  <script>
+    var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+close[i].onclick = function(){
+  var div = this.parentElement;
+  div.style.opacity = "0";
+  setTimeout(function(){ div.style.display = "none"; }, 600);
+}
+}
+  </script>

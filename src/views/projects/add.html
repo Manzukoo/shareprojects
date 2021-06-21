@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Añadir Proyecto</title>
+	
+<meta http-equiv="X-UA-Compatible" content="ie-edge"></meta>
+</head>
+<body>
+    <%- include ('../partials/navegacion.html')%>
+    <%- include ('../partials/alerts.html')%>
+
+<div class="container">
+    <div class="card">
+        <div class="card-form-project">
+        <div class="card-body">
+            <form action="/proyectos/add" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="project_name" placeholder="Nombre del Proyecto"
+                        autofocus required>
+                </div>
+                <div class="form-group">
+                    <input type="url" class="form-control" name="project_url" placeholder="URL" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="project_description" id="proj-desc" rows="2" placeholder="Descripción"
+                        class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="file" class="form-control" id="project_img" name="project_image"></input>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

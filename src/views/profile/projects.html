@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tus Proyectos</title>
+	
+
+</head>
+<body>
+    <%- include ('../partials/navegacion.html')%>
+    <%- include ('../partials/alerts.html')%>
+    
+<div class="container-list">
+    <div class="filas">
+        <%projects.forEach(p => {%>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <a href="<%=p.project_url%>" target="_blank">
+                        <h3 class="card-title">
+                            <%=p.project_name%>
+                        </h3>
+                    </a>
+                    <p class="project-descr"><%=p.project_description%></p>
+                    <p class="mayus-timeago"><%=timeago(p.timestamp)%></p>
+                    <a href="/proyectos/delete/<%=p.project_id%>" class="btn btn-delete">Eliminar</a>
+                    <a href="/proyectos/edit/<%=p.project_id%>" class="btn btn-edit">Editar</a>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editar Proyecto</title>
+	
+
+</head>
+<body>
+    <%- include ('../partials/navegacion.html')%>
+    <%- include ('../partials/alerts.html')%>
+
+<div class="container">
+    <div class="card">
+        <div class="card-form-project">
+        <div class="card-body">
+            <form action="/proyectos/edit/<%=proyecto.project_id%>" method="POST">
+                <div class="form-group">
+                    <input type="text" value="<%=proyecto.project_name%>" class="form-control" name="project_name"
+                        placeholder="Modificar el Nombre del Proyecto" autofocus required>
+                </div>
+                <div class="form-group">
+                    <input type="url" value="<%=proyecto.project_url%>" class="form-control" name="project_url"
+                        placeholder="Modificar la URL" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="project_description" id="proj-desc" rows="2" placeholder="Modificar la Descripción" style="max-height: 119px; height: 119px;"
+                        class="form-control"><%=proyecto.project_description%></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-confirm btn-block">
+                        Confirmar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

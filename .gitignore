@@ -1,0 +1,6 @@
+/node_modules/
+src/public/storage/
+/database/
+/.vscode/
+package-lock.json
+package.json

@@ -1,0 +1,45 @@
+<%- include ('head.html') %>
+
+<header>
+<ul>
+  <li><a href="/"><i class="fas fa-home"></i> Inicio</a></li>
+  <li><a href="/proyectos"><i class="fas fa-search"></i> Ver Proyectos</a></li>
+  <%if(user){%>
+  <li style="float:right"><a class="active" href="/perfil"><i class="fas fa-user"></i> <%=user.username%></a></li>
+  <li><a href="/perfil/proyectos"><i class="fas fa-hdd"></i> Tus Proyectos</a></li>
+  <li><a href="/logout"><i class="fas fa-sign-in-alt"></i> Logout</a></li>
+  <%}else{%>
+  <li style="float:right"><a class="active" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+  <%}%>
+</ul>
+
+
+
+
+
+<div id="vertical-menu" class="sidebar" style="width: 0;">
+  <a id="closeMenu" href="javascript:void(0)">&times;</a>
+  <a href="/home"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="/proyectos"><i class="fa fa-fw fa-search"></i> Proyectos</a>
+  <%if(user){%>
+  <a class="active" href="/perfil"><i class="fa fa-fw fa-user"></i> <%=user.username%></a>
+  <a href="/perfil/proyectos"><i class="fa fa-fw fa-hdd"></i> Tus Proyectos</a>
+  <a href="/logout"><i class="fa fa-fw fa-sign-in-alt"></i> Logout</a>
+  <%}else{%>
+  <a class="active" href="/login"><i class="fa fa-fw fa-sign-in-alt"></i> Login</a>
+  <%}%>
+</div>
+
+<div class="" style="display: none;" onclick="openMenu()"><i class="fas fa-bars"></i></div>
+
+<script>
+  function openMenu(){
+    document.getElementById("vertical-menu").style.width = "220px;";
+  }
+
+  function closeMenu(){
+    document.getElementById("closeMenu").style.width = "0;";
+  }
+</script>
+</header>
+

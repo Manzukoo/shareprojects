@@ -1,0 +1,446 @@
+*{
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-color: rgb(65, 64, 64);
+    margin: 0;
+}
+
+
+#welcome .message{
+    position: relative;
+    text-align: center;
+    font-size: 2.5em;
+    color: gray;
+}
+
+#welcome .desc{
+    position: relative;
+    text-align: center;
+    font-size: 1.6em;
+    color: gray;
+    display: block;
+}
+
+.container{
+    margin: 2.5% 40%;
+}
+
+.card{
+    display: inline;
+    margin: 19px;
+}
+
+.card-body{
+    border: 1.6px solid rgb(190, 186, 186);
+    border-radius: 3px;
+    padding: 0.8em;
+    background-color: rgb(226, 226, 226);
+    position: relative;
+    max-height: 13em;
+    height: 13em;
+}
+
+.card-form-project .card-body{
+    max-height: 20.9em;
+    height: 20.9em;
+}
+
+.register .card-form-project  .card-body{
+    max-height: 27em;
+    height: 27em;
+}
+
+
+.container.card-body{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.form-group{
+    padding-bottom: 5%;
+}
+
+.form-control{
+    height: 2.9em;
+    width: 22em;
+    border: 1.6px solid rgb(190, 186, 186);
+    border-radius:4px;
+    text-align: left;
+    font-size: 1em;
+}
+
+.btn{
+    border-radius: 4.5px;
+    text-align: center;
+    border: none;
+}
+
+.btn-block{
+    display:block;
+    width: 100%;
+    height: 2.7em;
+}
+
+.btn-success{
+    background-color:rgb(32, 168, 78);
+    color:rgb(255, 255, 255);
+    font-size: 1.2em;
+}
+
+.btn-err{
+    background-color:rgb(184, 55, 55);
+    color:rgb(255, 255, 255);
+    font-size: 1.2em;
+}
+
+.btn-report{
+    background-color:rgb(184, 55, 55);
+    color:rgb(197, 197, 197);
+    font-size: 1.2em;
+    font-family: 'Arial';
+    box-shadow: 0 0 0.3em rgb(47, 47, 47);
+
+}
+.card-body .btn-report{
+    padding: 1%;
+    bottom: 30%;
+    position: absolute;
+}
+
+.btn-confirm{
+    background-color:rgb(57, 138, 243);
+    color:rgb(255, 255, 255);
+    font-size: 1.2em;
+    
+}
+
+#proj-desc{ 
+        resize: vertical;
+}
+
+.container-profile-project{
+    text-align:center;
+}
+
+.container-profile-project .card-title{
+    font-size: 3em;
+}
+
+.btn-delete{
+    background-color:rgb(240, 64, 40);
+    color:rgb(255, 255, 255);
+    font-size: 1.2em;
+    padding: 7px;
+    position: absolute;
+}
+
+.btn-edit{
+    background-color:rgb(161, 160, 160);
+    color:rgb(255, 255, 255);
+    font-size: 1.2em;
+    padding: 7px;
+    position: absolute;
+    left: 87%;
+}
+
+.container-list .card-title{
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    color:rgb(94, 155, 235);
+}
+
+.container-list{
+    padding: 1.8% 2.3%;
+}
+
+.container-list .filas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4em;
+}
+
+.container-list .project-descr{
+    text-align: center;
+    font-size: 1.15em;
+}
+
+.mayus-timeago{
+    
+    font-size: 0.9em;
+    text-align: right;
+    }
+
+.card-title h3{
+    text-align: center;
+    font-size: 2em;
+    margin: .7em;
+    position: relative;
+    bottom: .6em;
+}
+
+.profile h3{
+    font-size: 1.6em;
+}
+
+.profile .card-txt{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.profile .btn-block{
+    text-align: center;
+}
+
+.register-txt{
+    text-align: right;
+}
+
+.register-txt a{
+    color:rgb(52, 123, 216);
+    font-size: 1.2em;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+.alert.success {background-color: #4CAF50;}
+.alert.incorrect {background-color: #af4c4c;}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.35em;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.sidebar{
+    display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 780px) and (max-width: 1024px){
+    body{
+        background-color:rgb(32, 168, 78);
+    }
+    
+    ul{
+        display: none;
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 16px;
+      }
+      
+      /* Style sidebar links */
+      .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+      }
+      
+      /* Style links on mouse-over */
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+
+    .container-list .card-title{
+        font-size: 2.7em;
+    }
+    
+    .container-list .project-descr{
+    text-align: center;
+    font-size: 1.15em;
+}
+
+
+    .container-list .filas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+    }
+
+    .main{
+        margin-left: 200px;
+    }
+
+    .sidebar {
+        padding-top: 30px;
+        width: 13em;
+        max-height: max-content;
+    }
+    .sidebar a {
+        font-size: 25px;
+    }
+    .sidebar{
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 780px){
+    body{
+        background-color:rgb(218, 132, 75);
+        
+    }
+    ul{
+        display: none;
+    }
+    .sidebar {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 16px;
+      }
+      
+      /* Style sidebar links */
+      .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+      }
+      
+      /* Style links on mouse-over */
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+
+      .container-list .card-title{
+        font-size: 2.7em;
+    }
+    
+    .container-list .project-descr{
+    text-align: center;
+    font-size: 1.15em;
+}
+    
+    .container-list .filas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+    }
+
+    .main{
+        margin-left: 160px;
+    }
+    .sidebar{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 780px){
+    body{
+        background-color:rgb(168, 32, 32);
+    }
+    ul{
+        display: none;
+    }
+
+    .sidebar{
+        display: inline;
+    }
+    
+    .sidebar {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 16px;
+      }
+      
+      /* Style sidebar links */
+      .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 30px;
+        color: #818181;
+        display: block;
+      }
+      
+      /* Style links on mouse-over */
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+
+      .container-list .card-title{
+        font-size: 2.7em;
+    }
+    
+    .container-list .project-descr{
+    text-align: center;
+    font-size: 1.15em;
+}
+    
+    .container-list .filas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+    }
+    
+    .main{
+        margin-left: 160px;
+    }
+}

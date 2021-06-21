@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reportar Proyecto <%=proyecto.project_name%></title>
+	
+
+</head>
+<body>
+    <%- include ('../partials/navegacion.html')%>
+    <%- include ('../partials/alerts.html')%>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form action="/proyectos/report/<%=proyecto.project_id%>" method="POST">
+                <div class="form-group">
+                    <textarea name="report_reason" id="proj-desc" rows="2" placeholder="Razón del Reporte."
+                        class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-err btn-block">
+                        Enviar Reporte.
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perfil</title>
+	
+
+</head>
+<body>
+    <%- include ('../partials/navegacion.html')%>
+    <%- include ('../partials/alerts.html')%>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="profile">
+                <div class="card-title">
+                    <h3>Bienvenido <%=user.fullname%></h3>
+                </div>
+                <p class="card-txt">¿No tienes añadido un proyecto?</p>
+                <a href="/proyectos/add" class="btn btn-confirm btn-block">Añadir Proyecto</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

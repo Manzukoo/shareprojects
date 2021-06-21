@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proyectos Login</title>
+	
+
+</head>
+<body>
+<%- include ('../partials/navegacion.html')%>
+<%- include ('../partials/alerts.html')%>
+
+<div class="container">
+    <div class="card">
+        <div class="card-form-project">
+        <div class="card-body">
+            <div class="card-title">
+                <h3>Login</h3>
+            </div>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" placeholder="Nombre de Usuario" autofocus required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="pass" placeholder="Contraseña" required>
+                </div>
+                <p class="register-txt">¿No tienes una cuenta?
+                    <a href="/register">Crear una.</a>
+                </p>
+                <div class="form-group">
+                    <button class="btn btn-confirm btn-block">
+                        Logearse
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html> 

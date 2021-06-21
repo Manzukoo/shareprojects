@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proyectos</title>
+	
+
+</head>
+<body>
+<%- include ('../partials/navegacion.html')%>
+<%- include ('../partials/alerts.html')%>
+<div class="container-list">
+    <div class="filas">
+        <%projects.forEach(p => {%>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <a href="/perfil/<%=p.project_user_id%>/proyecto/<%=p.project_id%>" class="fas fa-external-link-alt"></a>
+                    <a href="<%=p.project_url%>" target="_blank">
+                        <h3 class="card-title">
+                            <%=p.project_name%>
+                        </h3>
+                    </a>
+                    <p class="project-descr"><%=p.project_description%></p>
+                    <p class="mayus-timeago"><%=timeago(p.timestamp)%></p>
+                    <% if(p.project_user_id == userid) { %>
+                    <a href="/proyectos/delete/<%=p.project_id%>" class="btn btn-delete">Eliminar</a>
+                    <a href="/proyectos/edit/<%=p.project_id%>" class="btn btn-edit">Editar</a>
+                    <% }else{ %>
+
+                        <a href="/proyectos/report/<%=p.project_id%>" class="btn btn-report">Reportar</a>
+                        <a href="/perfil/<%=p.project_user_id%>/proyecto/<%=p.project_id%>" class="btn btn-block btn-success">Ver Proyecto</a>
+
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+</div>
+</body>
+</html>
