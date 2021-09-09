@@ -34,8 +34,9 @@
 */
 module.exports = {
   database: {
-    host: "localhost",
-    user: "root",
-    database: "database_shareprojects",
+    host: "tu_host",
+    user: "tu_user",
+    database: "tu__database",
+    //También pueden ponerle contraseña (password: "tu_contraseña")
   },
 };
